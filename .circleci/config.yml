@@ -22,7 +22,7 @@ jobs:
           name: Build an artifact
           command: echo "mull test example" > example.txt
       - store_artifacts:
-          path: example.txt
+          path: example.html
   deploy:
     docker:
       - image: cimg/base:stable
