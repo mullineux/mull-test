@@ -20,7 +20,7 @@ jobs:
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
-          command: echo "mull test example" > example.txt
+          command: echo "<h1>mull test example</h1>" > example.html
       - store_artifacts:
           path: example.html
   deploy:
