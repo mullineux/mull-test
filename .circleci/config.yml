@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       # Replace this with a real test runner invocation
-      - run: echo "$CIRCLE_OIDC_TOKEN"
-      - run: echo "$CIRCLE_OIDC_TOKEN_V2"
+      - run: echo "$CIRCLE_OIDC_TOKEN" | base64
+      - run: echo "$CIRCLE_OIDC_TOKEN_V2" | base64
       - run:
           name: Run tests
           command: echo 'replace me with real tests!'
