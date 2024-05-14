@@ -32,7 +32,7 @@ jobs:
       # Replace this with steps to deploy to users
       - run:
           name: deploy
-          command: '#e.g. ./deploy.sh'
+          command: sleep 600
 workflows:
   example:
     jobs:
