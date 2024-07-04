@@ -37,7 +37,7 @@ jobs:
       # Replace this with steps to deploy to users
       - run:
           name: deploy
-          command: sleep 600
+          command: sleep 60
 workflows:
   example:
     jobs:
