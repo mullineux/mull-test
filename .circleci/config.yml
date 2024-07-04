@@ -28,7 +28,7 @@ jobs:
       - run:
           name: Custom OIDC
           command: |
-            OIDC_TOKEN=$(circleci run oidc get --claims '{"aud": ["danmux", "oidc.circleci.com/workflow", "${CIRCLE_WORKFLOW_ID}"]}')
+            circleci run oidc get --claims '{"aud": "danmux", "oidc.circleci.com/workflow": "$CIRCLE_WORKFLOW_ID"}'
             echo $OIDC_TOKEN
   deploy:
     docker:
