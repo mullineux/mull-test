@@ -25,6 +25,7 @@ jobs:
           command: echo "<h1>mull test example</h1>" > example.html
       - store_artifacts:
           path: example.html
+      - run: circleci run oidc --claims '{"audience": ["aud1", "aud2"]}'    
   deploy:
     docker:
       - image: cimg/base:stable
